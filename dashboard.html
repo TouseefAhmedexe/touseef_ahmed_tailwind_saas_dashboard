@@ -15,12 +15,15 @@
         <div>
             <div class="h-16 flex items-center justify-between px-6 font-bold text-xl text-brand-500 border-b border-slate-100 dark:border-slate-700/50">
                 <span>Bloomrix Admin</span>
+                <button id="sidebar-close-btn" type="button" class="md:hidden text-slate-500 hover:text-slate-700 dark:hover:text-slate-200 p-1 rounded-md" aria-label="Close sidebar">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
             </div>
             <nav class="p-4 space-y-1" aria-label="Sidebar Navigation">
-                <a href="dashboard.html" class="block px-4 py-2.5 rounded-lg bg-brand-50 dark:bg-slate-700 text-brand-500 dark:text-white font-medium" aria-current="page">Dashboard</a>
-                <a href="pricing.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">Pricing</a>
-                <a href="profile.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">Profile</a>
-                <a href="index.html" class="block px-4 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">Landing Page</a>
+                <a href="dashboard.html" class="nav-link nav-link-active" aria-current="page">Dashboard</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="index.html" class="nav-link">Landing Page</a>
             </nav>
         </div>
         <div class="p-4 border-t border-slate-200 dark:border-slate-700">
@@ -37,7 +40,7 @@
     <div class="flex-grow flex flex-col min-w-0">
         <header class="h-16 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-4 sm:px-8 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <button id="sidebar-toggle-btn" type="button" class="md:hidden p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200" aria-label="Open sidebar menu">
+                <button id="sidebar-toggle-btn" type="button" class="md:hidden p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200" aria-expanded="false" aria-label="Open sidebar menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
                 <h1 class="text-xl font-bold">Dashboard Overview</h1>
@@ -51,19 +54,19 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="card">
                     <span class="text-xs font-semibold text-slate-500 uppercase">Total Projects</span>
-                    <div id="stat-total" class="text-3xl font-extrabold mt-2">--</div>
+                    <div id="stat-total-projects" class="text-3xl font-extrabold mt-2">--</div>
                 </div>
                 <div class="card">
                     <span class="text-xs font-semibold text-slate-500 uppercase">Active Projects</span>
-                    <div id="stat-active" class="text-3xl font-extrabold mt-2 text-amber-600 dark:text-amber-400">--</div>
+                    <div id="stat-active-projects" class="text-3xl font-extrabold mt-2 text-amber-600 dark:text-amber-400">--</div>
                 </div>
                 <div class="card">
                     <span class="text-xs font-semibold text-slate-500 uppercase">Completed Tasks</span>
-                    <div id="stat-completed" class="text-3xl font-extrabold mt-2 text-emerald-600 dark:text-emerald-400">--</div>
+                    <div id="stat-completed-tasks" class="text-3xl font-extrabold mt-2 text-emerald-600 dark:text-emerald-400">--</div>
                 </div>
                 <div class="card">
                     <span class="text-xs font-semibold text-slate-500 uppercase">Pending Tasks</span>
-                    <div id="stat-pending" class="text-3xl font-extrabold mt-2 text-blue-600 dark:text-blue-400">--</div>
+                    <div id="stat-pending-tasks" class="text-3xl font-extrabold mt-2 text-blue-600 dark:text-blue-400">--</div>
                 </div>
             </div>
 

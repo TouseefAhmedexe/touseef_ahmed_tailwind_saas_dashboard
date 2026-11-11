@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
         mobileMenuBtn.addEventListener('click', () => {
             const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
             mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
@@ -45,20 +46,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const sidebarToggleBtn = document.getElementById('sidebar-toggle-btn');
+    const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
     const sidebar = document.getElementById('dashboard-sidebar');
     const sidebarOverlay = document.getElementById('sidebar-overlay');
 
-    if (sidebarToggleBtn && sidebar) {
+    if (sidebar) {
         function openSidebar() {
             sidebar.classList.remove('-translate-x-full');
             if (sidebarOverlay) sidebarOverlay.classList.remove('hidden');
+            if (sidebarToggleBtn) sidebarToggleBtn.setAttribute('aria-expanded', 'true');
         }
+
         function closeSidebar() {
             sidebar.classList.add('-translate-x-full');
             if (sidebarOverlay) sidebarOverlay.classList.add('hidden');
+            if (sidebarToggleBtn) sidebarToggleBtn.setAttribute('aria-expanded', 'false');
         }
 
-        sidebarToggleBtn.addEventListener('click', openSidebar);
+        if (sidebarToggleBtn) {
+            sidebarToggleBtn.setAttribute('aria-expanded', 'false');
+            sidebarToggleBtn.addEventListener('click', openSidebar);
+        }
+        if (sidebarCloseBtn) sidebarCloseBtn.addEventListener('click', closeSidebar);
         if (sidebarOverlay) sidebarOverlay.addEventListener('click', closeSidebar);
     }
 });

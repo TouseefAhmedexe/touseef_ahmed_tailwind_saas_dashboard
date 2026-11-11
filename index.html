@@ -12,13 +12,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="index.html" class="text-2xl font-bold text-brand-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg">Bloomrix</a>
             <nav class="hidden md:flex space-x-8" aria-label="Main Navigation">
-                <a href="index.html" class="text-brand-500 font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md px-2 py-1">Home</a>
-                <a href="pricing.html" class="hover:text-brand-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md px-2 py-1">Pricing</a>
-                <a href="dashboard.html" class="hover:text-brand-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md px-2 py-1">Dashboard</a>
-                <a href="profile.html" class="hover:text-brand-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-md px-2 py-1">Profile</a>
+                <a href="index.html" class="nav-link nav-link-active">Home</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="profile.html" class="nav-link">Profile</a>
             </nav>
             <div class="flex items-center space-x-3">
-                <button type="button" class="theme-toggle-btn p-2 text-xs sm:text-sm rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500">🌙 Dark Mode</button>
+                <button type="button" class="theme-toggle-btn p-2 text-xs sm:text-sm rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700">🌙 Dark Mode</button>
                 <a href="dashboard.html" class="btn-primary hidden sm:inline-block">Get Started</a>
                 <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200" aria-expanded="false" aria-label="Toggle navigation menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -26,10 +26,10 @@
             </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 pt-2 pb-4 space-y-2">
-            <a href="index.html" class="block px-3 py-2 rounded-md font-semibold text-brand-500">Home</a>
-            <a href="pricing.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700">Pricing</a>
-            <a href="dashboard.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700">Dashboard</a>
-            <a href="profile.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700">Profile</a>
+            <a href="index.html" class="nav-link nav-link-active">Home</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="dashboard.html" class="nav-link">Dashboard</a>
+            <a href="profile.html" class="nav-link">Profile</a>
         </div>
     </header>
 
@@ -39,7 +39,7 @@
             <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-8">Streamline your workflow, monitor team performance, and make data-driven decisions with interactive customer dashboards.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="dashboard.html" class="btn-primary px-6 py-3 text-lg">Launch Dashboard</a>
-                <a href="pricing.html" class="btn-outline px-6 py-3 text-lg">View Pricing Plans</a>
+                <a href="pricing.html" class="btn-outline px-6 py-3 text-lg">View All Plans</a>
             </div>
         </section>
 
@@ -61,32 +61,47 @@
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white dark:bg-slate-800/50 rounded-2xl my-12 border border-slate-200 dark:border-slate-800">
-            <h2 class="text-3xl font-bold text-center mb-12">Trusted by Engineering Teams</h2>
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-200 dark:border-slate-800">
+            <h2 class="text-3xl font-bold text-center mb-4">Transparent Pricing Plans</h2>
+            <p class="text-center text-slate-600 dark:text-slate-400 mb-12">Flexible options tailored for startups to enterprise teams.</p>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="card">
-                    <p class="text-slate-600 dark:text-slate-300 italic mb-4">"Bloomrix transformed how we handle task velocity and financial audit records across our engineering squads."</p>
-                    <div class="font-bold">Ayesha Khan</div>
-                    <div class="text-xs text-slate-500">VP of Product, TechCorp</div>
+                <div class="card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Starter</h3>
+                        <div class="text-4xl font-extrabold mb-4">$19<span class="text-sm font-normal text-slate-500">/mo</span></div>
+                        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
+                            <li>✓ Up to 5 Active Projects</li>
+                            <li>✓ Basic Task Analytics</li>
+                            <li>✓ Standard Email Support</li>
+                        </ul>
+                    </div>
+                    <a href="pricing.html" class="btn-outline text-center w-full">Learn More</a>
                 </div>
-                <div class="card">
-                    <p class="text-slate-600 dark:text-slate-300 italic mb-4">"The responsive dashboard and dark mode support make daily project oversight effortless."</p>
-                    <div class="font-bold">Hamza Ali</div>
-                    <div class="text-xs text-slate-500">Lead Architect, Apex Studio</div>
+                <div class="card flex flex-col justify-between border-2 border-brand-500 relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-xs px-3 py-1 rounded-full font-semibold">Recommended</span>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Professional</h3>
+                        <div class="text-4xl font-extrabold mb-4">$49<span class="text-sm font-normal text-slate-500">/mo</span></div>
+                        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
+                            <li>✓ Unlimited Projects</li>
+                            <li>✓ Advanced Data Exports</li>
+                            <li>✓ Priority Support</li>
+                        </ul>
+                    </div>
+                    <a href="pricing.html" class="btn-primary text-center w-full">Get Started</a>
                 </div>
-                <div class="card">
-                    <p class="text-slate-600 dark:text-slate-300 italic mb-4">"Super clean design tokens and lightning fast table filtering. Couldn't ask for a better SaaS portal."</p>
-                    <div class="font-bold">Sara Ahmed</div>
-                    <div class="text-xs text-slate-500">Engineering Manager, DataFlow</div>
+                <div class="card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+                        <div class="text-4xl font-extrabold mb-4">$99<span class="text-sm font-normal text-slate-500">/mo</span></div>
+                        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-6">
+                            <li>✓ Custom API Integrations</li>
+                            <li>✓ Dedicated Account Manager</li>
+                            <li>✓ 24/7 Phone & Email Support</li>
+                        </ul>
+                    </div>
+                    <a href="pricing.html" class="btn-outline text-center w-full">Contact Sales</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold mb-4">Ready to Upgrade Your Workflow?</h2>
-                <p class="text-slate-600 dark:text-slate-400 mb-8">Choose a tier that fits your growth trajectory or explore our enterprise options.</p>
-                <a href="pricing.html" class="btn-primary px-8 py-3 text-lg">Explore Pricing Plans</a>
             </div>
         </section>
 

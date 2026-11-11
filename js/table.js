@@ -19,18 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
     if (activityList) {
         fetch('data/activities.json')
             .then(res => {
-                if (!res.ok) throw new Error('Network response was not ok');
+                if (!res.ok) throw new Error('Network response failed');
                 return res.json();
             })
             .then(activities => {
                 activityList.innerHTML = '';
-                if (activities.length === 0) {
-                    const emptyLi = document.createElement('li');
-                    emptyLi.className = 'py-4 text-sm text-slate-500 text-center';
-                    emptyLi.textContent = 'No recent activities found.';
-                    activityList.appendChild(emptyLi);
-                    return;
-                }
+                
+                const completedTasks = activities.filter(a => a.status === 'Completed').length;
+                const pendingTasks = activities.filter(a => a.status === 'Pending').length;
+                
+                const completedTaskElem = document.getElementById('stat-completed-tasks');
+                const pendingTaskElem = document.getElementById('stat-pending-tasks');
+                if (completedTaskElem) completedTaskElem.textContent = completedTasks;
+                if (pendingTaskElem) pendingTaskElem.textContent = pendingTasks;
+
                 activities.forEach(item => {
                     const li = document.createElement('li');
                     li.className = 'py-3 border-b border-slate-100 dark:border-slate-700/50 last:border-0 flex items-start justify-between gap-4';
@@ -74,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             records = data;
-            updateDashboardStats(records);
+            updateProjectStats(records);
             render();
         })
         .catch(() => {
@@ -83,28 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const td = document.createElement('td');
             td.colSpan = 6;
             td.className = 'px-4 py-8 text-center text-sm text-rose-500';
-            td.textContent = 'Error loading transactions. Please serve files over HTTP/Live Server.';
+            td.textContent = 'Error loading transactions.';
             tr.appendChild(td);
             tableBody.appendChild(tr);
         });
 
-    function updateDashboardStats(data) {
-        const totalElem = document.getElementById('stat-total');
-        const activeElem = document.getElementById('stat-active');
-        const completedElem = document.getElementById('stat-completed');
-        const pendingElem = document.getElementById('stat-pending');
+    function updateProjectStats(data) {
+        const totalElem = document.getElementById('stat-total-projects');
+        const activeElem = document.getElementById('stat-active-projects');
 
-        if (!totalElem) return;
-
-        const total = data.length;
-        const active = data.filter(i => i.status === 'In Progress').length;
-        const completed = data.filter(i => i.status === 'Completed').length;
-        const pending = data.filter(i => i.status === 'Pending').length;
-
-        totalElem.textContent = total;
-        activeElem.textContent = active;
-        completedElem.textContent = completed;
-        pendingElem.textContent = pending;
+        if (totalElem) totalElem.textContent = data.length;
+        if (activeElem) activeElem.textContent = data.filter(i => i.status === 'In Progress').length;
     }
 
     function getFilteredRecords() {
