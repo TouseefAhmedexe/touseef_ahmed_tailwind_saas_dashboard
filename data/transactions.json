@@ -1,0 +1,12 @@
+[
+  { "id": "PROJ-101", "name": "Cloud Storage Migration", "client": "TechCorp", "date": "2026-11-01", "amount": "$1,200", "status": "Completed" },
+  { "id": "PROJ-102", "name": "UI/UX Redesign", "client": "Apex Studio", "date": "2026-11-03", "amount": "$3,500", "status": "In Progress" },
+  { "id": "PROJ-103", "name": "API Gateway Integration", "client": "DataFlow", "date": "2026-11-04", "amount": "$850", "status": "Pending" },
+  { "id": "PROJ-104", "name": "Database Audit", "client": "SecureNet", "date": "2026-11-05", "amount": "$2,100", "status": "Completed" },
+  { "id": "PROJ-105", "name": "Mobile App Sync", "client": "Appify", "date": "2026-11-06", "amount": "$4,000", "status": "In Progress" },
+  { "id": "PROJ-106", "name": "Security Patching", "client": "FinTech LLC", "date": "2026-11-07", "amount": "$600", "status": "Completed" },
+  { "id": "PROJ-107", "name": "DevOps Pipeline Setup", "client": "CloudScale", "date": "2026-11-08", "amount": "$2,900", "status": "Pending" },
+  { "id": "PROJ-108", "name": "E-Commerce Checkout", "client": "ShopCart", "date": "2026-11-09", "amount": "$1,750", "status": "Completed" },
+  { "id": "PROJ-109", "name": "Analytics Dashboard", "client": "InsightCo", "date": "2026-11-10", "amount": "$3,100", "status": "In Progress" },
+  { "id": "PROJ-110", "name": "Payment Gateway Setup", "client": "PayQuick", "date": "2026-11-11", "amount": "$950", "status": "Completed" }
+]

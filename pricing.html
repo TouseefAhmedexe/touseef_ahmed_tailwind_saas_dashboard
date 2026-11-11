@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomrix SaaS - Pricing Plans</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="js/theme.js" defer></script>
+    <script src="js/pricing.js" defer></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold text-brand-500">Bloomrix</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-brand-500 transition-colors">Home</a>
+                <a href="pricing.html" class="text-brand-500 font-semibold">Pricing</a>
+                <a href="dashboard.html" class="hover:text-brand-500 transition-colors">Dashboard</a>
+                <a href="profile.html" class="hover:text-brand-500 transition-colors">Profile</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300">Dark Theme</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <h1 class="text-4xl font-extrabold mb-4">Flexible Plans for Teams of All Sizes</h1>
+            <p class="text-slate-600 dark:text-slate-400">Choose the right tier to scale your project dashboard analytics.</p>
+
+            <div class="flex items-center justify-center mt-8 gap-3">
+                <span class="text-sm font-medium">Monthly Billing</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="billing-toggle" class="sr-only peer">
+                    <div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-500"></div>
+                </label>
+                <span class="text-sm font-medium">Yearly Billing <span class="text-xs text-brand-500 font-semibold">(Save 20%)</span></span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card flex flex-col justify-between">
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Starter</h2>
+                    <div class="text-4xl font-extrabold mb-6">
+                        <span class="price-monthly">$19<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                        <span class="price-yearly hidden">$15<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
+                        <li>Up to 5 Active Projects</li>
+                        <li>Basic Task Analytics</li>
+                        <li>Email Support</li>
+                    </ul>
+                </div>
+                <a href="dashboard.html" class="btn-outline text-center w-full">Get Started</a>
+            </div>
+
+            <div class="card flex flex-col justify-between border-2 border-brand-500 relative">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-xs px-3 py-1 rounded-full font-semibold">Recommended</span>
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Professional</h2>
+                    <div class="text-4xl font-extrabold mb-6">
+                        <span class="price-monthly">$49<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                        <span class="price-yearly hidden">$39<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
+                        <li>Unlimited Projects</li>
+                        <li>Advanced Data Exports</li>
+                        <li>Priority Support</li>
+                    </ul>
+                </div>
+                <a href="dashboard.html" class="btn-primary text-center w-full">Get Started</a>
+            </div>
+
+            <div class="card flex flex-col justify-between">
+                <div>
+                    <h2 class="text-xl font-bold mb-2">Enterprise</h2>
+                    <div class="text-4xl font-extrabold mb-6">
+                        <span class="price-monthly">$99<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                        <span class="price-yearly hidden">$79<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
+                        <li>Custom API Integrations</li>
+                        <li>Dedicated Account Manager</li>
+                        <li>24/7 Phone & Email Support</li>
+                    </ul>
+                </div>
+                <a href="dashboard.html" class="btn-outline text-center w-full">Contact Sales</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

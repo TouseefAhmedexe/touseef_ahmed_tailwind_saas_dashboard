@@ -1,0 +1,12 @@
+{
+  "name": "touseef_ahmed_tailwind_saas_dashboard",
+  "version": "1.0.0",
+  "description": "SaaS product website and customer dashboard using Tailwind CSS CLI",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
