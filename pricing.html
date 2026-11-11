@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloomrix SaaS - Pricing Plans</title>
     <link rel="stylesheet" href="dist/output.css">
-    <script src="js/theme.js" defer></script>
+    <script src="js/theme.js"></script>
     <script src="js/pricing.js" defer></script>
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
-    <header class="sticky top-0 z-50 bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-sans">
+    <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-800/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="index.html" class="text-2xl font-bold text-brand-500">Bloomrix</a>
             <nav class="hidden md:flex space-x-8">
@@ -19,15 +19,24 @@
                 <a href="profile.html" class="hover:text-brand-500 transition-colors">Profile</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300">Dark Theme</button>
+                <button type="button" class="theme-toggle-btn p-2 text-xs sm:text-sm rounded-lg border border-slate-300 dark:border-slate-700">🌙 Dark Mode</button>
+                <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
             </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700">Home</a>
+            <a href="pricing.html" class="block px-3 py-2 rounded-md font-semibold text-brand-500">Pricing</a>
+            <a href="dashboard.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700">Dashboard</a>
+            <a href="profile.html" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700">Profile</a>
         </div>
     </header>
 
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center max-w-3xl mx-auto mb-12">
             <h1 class="text-4xl font-extrabold mb-4">Flexible Plans for Teams of All Sizes</h1>
-            <p class="text-slate-600 dark:text-slate-400">Choose the right tier to scale your project dashboard analytics.</p>
+            <p class="text-slate-600 dark:text-slate-400">Choose the right tier to scale your project analytics and customer dashboards.</p>
 
             <div class="flex items-center justify-center mt-8 gap-3">
                 <span class="text-sm font-medium">Monthly Billing</span>
@@ -39,18 +48,18 @@
             </div>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-3 gap-8 mb-20">
             <div class="card flex flex-col justify-between">
                 <div>
                     <h2 class="text-xl font-bold mb-2">Starter</h2>
                     <div class="text-4xl font-extrabold mb-6">
                         <span class="price-monthly">$19<span class="text-sm font-normal text-slate-500">/mo</span></span>
-                        <span class="price-yearly hidden">$15<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                        <span class="price-yearly hidden">$15<span class="text-sm font-normal text-slate-500">/mo <span class="block text-xs font-normal text-slate-400">($180 billed yearly)</span></span></span>
                     </div>
                     <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
-                        <li>Up to 5 Active Projects</li>
-                        <li>Basic Task Analytics</li>
-                        <li>Email Support</li>
+                        <li>✓ Up to 5 Active Projects</li>
+                        <li>✓ Basic Task Analytics</li>
+                        <li>✓ Standard Email Support</li>
                     </ul>
                 </div>
                 <a href="dashboard.html" class="btn-outline text-center w-full">Get Started</a>
@@ -62,12 +71,12 @@
                     <h2 class="text-xl font-bold mb-2">Professional</h2>
                     <div class="text-4xl font-extrabold mb-6">
                         <span class="price-monthly">$49<span class="text-sm font-normal text-slate-500">/mo</span></span>
-                        <span class="price-yearly hidden">$39<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                        <span class="price-yearly hidden">$39<span class="text-sm font-normal text-slate-500">/mo <span class="block text-xs font-normal text-slate-400">($468 billed yearly)</span></span></span>
                     </div>
                     <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
-                        <li>Unlimited Projects</li>
-                        <li>Advanced Data Exports</li>
-                        <li>Priority Support</li>
+                        <li>✓ Unlimited Projects</li>
+                        <li>✓ Advanced CSV/PDF Data Exports</li>
+                        <li>✓ Priority Support</li>
                     </ul>
                 </div>
                 <a href="dashboard.html" class="btn-primary text-center w-full">Get Started</a>
@@ -78,17 +87,59 @@
                     <h2 class="text-xl font-bold mb-2">Enterprise</h2>
                     <div class="text-4xl font-extrabold mb-6">
                         <span class="price-monthly">$99<span class="text-sm font-normal text-slate-500">/mo</span></span>
-                        <span class="price-yearly hidden">$79<span class="text-sm font-normal text-slate-500">/mo</span></span>
+                        <span class="price-yearly hidden">$79<span class="text-sm font-normal text-slate-500">/mo <span class="block text-xs font-normal text-slate-400">($948 billed yearly)</span></span></span>
                     </div>
                     <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
-                        <li>Custom API Integrations</li>
-                        <li>Dedicated Account Manager</li>
-                        <li>24/7 Phone & Email Support</li>
+                        <li>✓ Custom API Integrations</li>
+                        <li>✓ Dedicated Account Manager</li>
+                        <li>✓ 24/7 Phone & Email Support</li>
                     </ul>
                 </div>
                 <a href="dashboard.html" class="btn-outline text-center w-full">Contact Sales</a>
             </div>
         </div>
+
+        <section class="card space-y-6">
+            <h2 class="text-2xl font-bold text-center">Feature Comparison Matrix</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-900/50 text-sm">
+                            <th scope="col" class="p-4">Feature</th>
+                            <th scope="col" class="p-4 text-center">Starter</th>
+                            <th scope="col" class="p-4 text-center font-bold text-brand-500">Professional</th>
+                            <th scope="col" class="p-4 text-center">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-700/50 text-sm">
+                        <tr>
+                            <td class="p-4 font-medium">Active Projects</td>
+                            <td class="p-4 text-center">5</td>
+                            <td class="p-4 text-center font-bold">Unlimited</td>
+                            <td class="p-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Data Retention</td>
+                            <td class="p-4 text-center">30 Days</td>
+                            <td class="p-4 text-center font-bold">1 Year</td>
+                            <td class="p-4 text-center">Custom</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Dark Mode Support</td>
+                            <td class="p-4 text-center text-emerald-600">✓</td>
+                            <td class="p-4 text-center text-emerald-600 font-bold">✓</td>
+                            <td class="p-4 text-center text-emerald-600">✓</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Dedicated Manager</td>
+                            <td class="p-4 text-center text-slate-400">✗</td>
+                            <td class="p-4 text-center text-slate-400">✗</td>
+                            <td class="p-4 text-center text-emerald-600">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 </body>
 </html>
