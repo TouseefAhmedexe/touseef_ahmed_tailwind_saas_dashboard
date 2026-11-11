@@ -11,7 +11,7 @@ A SaaS product website, customer dashboard, pricing calculator, and user profile
    npm run watch
 
 3. Build minified output CSS:
-   npm run build
+   npm run build 
 
 ## Features
 - Theme persistence stored in `localStorage`
